@@ -41,4 +41,4 @@ npm run init-db
 
 This creates:
 - Default admin: admin@admin.com / admin123
-- Sample categories, products, users, stores, delivery boys"# thequickpoint_backned" 
+- Sample categories, products, users, stores, delivery boys

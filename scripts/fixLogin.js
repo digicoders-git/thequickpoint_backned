@@ -4,7 +4,7 @@ import { connectDB } from "../config/db.js";
 
 const fixLogin = async () => {
   try {
-    console.log("🔧 Fixing login issues...");
+    console.log(" Fixing login issues...");
     
     // Connect to database
     await connectDB();
@@ -27,14 +27,7 @@ const fixLogin = async () => {
     // Verify admin
     const savedAdmin = await Admin.findOne({ email: "admin@admin.com" });
     if (savedAdmin) {
-      // console.log(" Admin verification: SUCCESS");
-      // console.log("📧 Email:", savedAdmin.email);
-      // console.log("👤 Name:", savedAdmin.name);
-      // console.log("🔑 Password: admin123");
-      // console.log("");
-      // console.log("🎉 Login should now work!");
-      // console.log("🌐 Frontend: http://localhost:5173");
-      // console.log("🔗 Backend: http://localhost:5000");
+     
     } else {
       // console.log("❌ Admin verification: FAILED");
     }

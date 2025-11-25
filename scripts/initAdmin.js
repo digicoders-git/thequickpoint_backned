@@ -10,9 +10,7 @@ const initAdmin = async () => {
     const existingAdmin = await Admin.findOne({ email: "admin@admin.com" });
     
     if (existingAdmin) {
-      // console.log("✅ Default admin already exists");
-      // console.log("📧 Email: admin@admin.com");
-      // console.log("🔑 Password: admin123");
+    
       return;
     }
 
