@@ -57,6 +57,9 @@ export const createAdmin = async (req, res) => {
   }
 };
 
+
+// get user
+
 export const getUsers = async (req, res) => {
   try {
     const users = await User.find().select('-password');
@@ -65,6 +68,9 @@ export const getUsers = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+
+// create user
 
 export const createUser = async (req, res) => {
   try {
@@ -84,6 +90,9 @@ export const createUser = async (req, res) => {
   }
 };
 
+
+// update user
+
 export const updateUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -99,6 +108,9 @@ export const updateUser = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+
+// delete user
 
 export const deleteUser = async (req, res) => {
   try {

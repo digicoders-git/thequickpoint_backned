@@ -29,11 +29,11 @@ const fixLogin = async () => {
     if (savedAdmin) {
      
     } else {
-      // console.log("❌ Admin verification: FAILED");
+      
     }
     
   } catch (error) {
-    // console.error("❌ Error:", error.message);
+    
   } finally {
     mongoose.connection.close();
   }

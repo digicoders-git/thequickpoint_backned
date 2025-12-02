@@ -1,16 +1,16 @@
 import express from "express";
-import { 
-  loginAdmin, 
-  createAdmin, 
-  getUsers, 
-  createUser, 
-  updateUser, 
-  deleteUser, 
+import {
+  loginAdmin,
+  createAdmin,
+  getUsers,
+  createUser,
+  updateUser,
+  deleteUser,
   getDashboardStats,
   changePassword,
   getRecentActivities,
   getChartData,
-  globalSearch 
+  globalSearch
 } from "../controllers/adminController.js";
 import authenticateToken from "../middlewares/auth.js";
 
@@ -21,7 +21,7 @@ router.get("/test", async (req, res) => {
   try {
     const Admin = (await import('../models/Admin.js')).default;
     const adminCount = await Admin.countDocuments();
-    
+
     if (adminCount === 0) {
       const admin = new Admin({
         name: 'Admin',
@@ -31,7 +31,7 @@ router.get("/test", async (req, res) => {
       await admin.save();
       return res.json({ message: 'Default admin created', email: 'admin@admin.com', password: 'admin123' });
     }
-    
+
     res.json({ message: 'Backend working', adminCount });
   } catch (error) {
     res.json({ error: error.message });
